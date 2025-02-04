@@ -1,10 +1,10 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway: http://127.0.0.1:8080
+  gateway: https://faas.addr.se
 functions:
   api:
-    lang: python3-http
+    lang: golang-http
     handler: ./api
     image: ghcr.io/stenstromen/api:latest
 
