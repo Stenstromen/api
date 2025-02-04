@@ -19,8 +19,8 @@ jobs:
       - name: Get faas-cli
         run: curl -sLSf https://cli.openfaas.com | sudo sh
 
-      - name: Pull custom templates from stack.yml
-        run: faas-cli template pull stack
+      - name: Pull template
+        run: faas-cli template store pull golang-http
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
